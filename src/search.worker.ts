@@ -1,4 +1,4 @@
-// Runs the blockdb queries off the main thread. Each search unpacks and parses one or more
+// Runs the zonemapdb queries off the main thread. Each search unpacks and parses one or more
 // data blocks of a few MB of JSON; on the main thread that froze typing for ~300 ms.
 import { format, search, totalAddresses, useBasePath } from "./search";
 

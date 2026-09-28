@@ -1,5 +1,5 @@
 {
-  "$schema": "node_modules/blockdb-cli/config.schema.json",
+  "$schema": "node_modules/zonemapdb-cli/config.schema.json",
   "formatVersion": 0,
   "collection": "addresses",
   "input": {
@@ -36,5 +36,7 @@
       }
     }
   },
-  "compression": "gzip"
+  "compression": "gzip",
+  "output": "public/blockdb",
+  "clientOut": "src/blockdb"
 }

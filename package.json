@@ -2,7 +2,7 @@
   "name": "block-addresses",
   "private": true,
   "type": "module",
-  "description": "Proof of concept for blockdb: every US address, searched from static files on GitHub Pages.",
+  "description": "Proof of concept for zonemapdb: every US address, searched from static files on GitHub Pages.",
   "scripts": {
     "fetch-overture": "uv run --with duckdb python scripts/fetch_overture.py",
     "fetch-census": "scripts/fetch_census.sh",
@@ -15,16 +15,16 @@
     "test": "vitest run",
     "deploy-pages": "scripts/deploy.sh"
   },
-  "dependencies": {
-    "blockdb": "https://github.com/shivan2418/blockdb/releases/download/v0.6.0/blockdb-0.6.0.tgz"
-  },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^7.3.1",
-    "blockdb-cli": "https://github.com/shivan2418/blockdb/releases/download/v0.6.0/blockdb-cli-0.6.0.tgz",
     "svelte": "^5.57.1",
     "svelte-check": "^4.7.6",
     "typescript": "^6.0.3",
     "vite": "^8.3.0",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "zonemapdb-cli": "0.8.0"
+  },
+  "dependencies": {
+    "zonemapdb": "0.8.0"
   }
 }

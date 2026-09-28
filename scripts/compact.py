@@ -1,4 +1,4 @@
-"""Merge, clean and deduplicate US addresses into per-state NDJSON for blockdb.
+"""Merge, clean and deduplicate US addresses into per-state NDJSON for zonemapdb.
 
 Sources, both read per state:
   - addresses/us/<state>/*-addresses-*.geojson, extracted from the OpenAddresses collection zips
@@ -256,7 +256,7 @@ def compact_state(con: duckdb.DuckDBPyConnection, state: str) -> tuple[int, int]
         while batch := rows.fetchmany(100_000):
             for number, street, unit, city, postcode in batch:
                 # The sort key. Sorting by street alone put all 450k "MAIN ST" addresses in one
-                # 40 MB block, since blockdb never splits equal keys; with the city and state in
+                # 40 MB block, since zonemapdb never splits equal keys; with the city and state in
                 # the key they spread over normal-size blocks in town order, and a search that
                 # names the town reads just one. "|" is stripped from every field by cleaned().
                 record = {"key": f"{street}|{city}|{region}", "number": number, "street": street}

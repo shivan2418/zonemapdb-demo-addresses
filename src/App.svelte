@@ -103,7 +103,7 @@
 <main>
   <h1>Search {total === null ? "" : total.toLocaleString("en-US")} US addresses</h1>
   <p class="tagline">
-    A proof of concept for <a href="https://github.com/shivan2418/blockdb">blockdb</a>. There's no API
+    A proof of concept for <a href="https://github.com/shivan2418/zonemapdb">zonemapdb</a>. There's no API
     and no server: your browser searches static files directly.
   </p>
 

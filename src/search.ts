@@ -300,7 +300,7 @@ export async function search(input: string, limit = 20): Promise<Addresses[] | n
   return [...unique.values()].slice(0, limit);
 }
 
-// Answered from the manifest alone: an empty filter is the one count blockdb knows exactly.
+// Answered from the manifest alone: an empty filter is the one count zonemapdb knows exactly.
 export async function totalAddresses(): Promise<number> {
   return (await db.addresses.count()).count;
 }
